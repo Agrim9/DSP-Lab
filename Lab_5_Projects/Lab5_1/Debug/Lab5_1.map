@@ -1,0 +1,180 @@
+******************************************************************************
+              TMS320C55x Linker Unix v4.4.1                    
+******************************************************************************
+>> Linked Wed Mar  1 14:50:43 2017
+
+OUTPUT FILE NAME:   <Lab5_1.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 000201be
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+                        (bytes)   (bytes)    (bytes)   (bytes)
+----------------------  --------  ---------  --------  --------  ----  --------
+PAGE 0:
+  MMR                   00000000   000000c0  00000000  000000c0  RWIX
+  DARAM0                000000c0   0000ff40  000031a0  0000cda0  RWIX
+  SARAM0                00010000   00010000  00000000  00010000  RWIX
+  SARAM1                00020000   00020000  0000020e  0001fdf2  RWIX
+  SARAM2                00040000   0000fe00  0000002a  0000fdd6  RWIX
+  VECS                  0004fe00   00000200  00000100  00000100  RWIX
+  PDROM                 00ff8000   00008000  00000000  00008000  R IX
+
+PAGE 2:
+  IOPORT                00000000   00020000  00000000  00020000  RWI 
+
+
+SECTION ALLOCATION MAP
+(Addresses surrounded by []'s are displayed for convenience only!)
+
+output                                                          attributes/
+section   page  orgn(bytes) orgn(words) len(bytes) len(words)   input sections
+--------  ----  ----------- ----------- ---------- ----------   --------------
+.pinit       0   [ 00040000 ]  00020000          *   00000000   UNINITIALIZED
+
+.stack       0   [ 000000c0 ]  00000060          *   00001000   UNINITIALIZED
+                 [ 000000c0 ]  00000060          *   00001000   --HOLE--
+
+.data        0   [ 000000c0 ]  00000060          *   00000000   UNINITIALIZED
+
+.sysstack 
+*            0   [ 000020c0 ]  00001060          *   00000800   UNINITIALIZED
+                 [ 000020c0 ]  00001060          *   00000800   --HOLE--
+
+.bss         0   [ 000030c0 ]  00001860          *   000000d0   UNINITIALIZED
+                 [ 000030c0 ]  00001860          *   000000c8   main_iwl.obj (.bss)
+                 [ 00003250 ]  00001928          *   00000004   rts55x.lib : _lock.obj (.bss)
+                 [ 00003258 ]  0000192c          *   00000004              : exit.obj (.bss)
+
+.text        0     00020000  [ 00010000 ] 0000020e          *   
+                   00020000  [ 00010000 ] 00000094          *   main_iwl.obj (.text)
+                   00020094  [ 0001004a ] 00000054          *   usbstk5515bsl.lib : usbstk5515.obj (.text)
+                   000200e8  [ 00010074 ] 0000004d          *   rts55x.lib : autoinit.obj (.text)
+                   00020135  [ 0001009a+] 0000004b          *              : args_main.obj (.text)
+                   00020180  [ 000100c0 ] 0000003e          *              : exit.obj (.text)
+                   000201be  [ 000100df ] 00000034          *              : boot.obj (.text)
+                   000201f2  [ 000100f9 ] 00000012          *              : _lock.obj (.text)
+                   00020204  [ 00010102 ] 00000007          *              : exit.obj (.text:CIO_breakpoint)
+                   0002020b  [ 00010105+] 00000002          *              : vectors.obj (.text)
+                   0002020d  [ 00010106 ] 00000001          *   --HOLE-- [fill = 20]
+
+.cinit       0   [ 00040000 ]  00020000          *   00000015   
+                 [ 00040000 ]  00020000          *   0000000a   rts55x.lib : _lock.obj (.cinit)
+                 [ 00040014 ]  0002000a          *   0000000a              : exit.obj (.cinit)
+                 [ 00040028 ]  00020014          *   00000001   --HOLE-- [fill = 0]
+
+vectors      0     0004fe00  [ 00027f00 ] 00000100          *   
+                   0004fe00  [ 00027f00 ] 00000100          *   rts55x.lib : vectors.obj (vectors)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+abs. value/
+byte addr   word addr   name
+---------   ---------   ----
+00000002                $TI_capability$C5500$CallingConvention
+00000002                $TI_capability$C5500$MemoryModel
+00000001                $TI_capability_requires_rev3
+ffffffff                .bss
+ffffffff                .data
+ffffffff                .text
+00020205                C$$EXIT
+0004fe00                _Reset
+000200da                _USBSTK5515_init
+00020094                _USBSTK5515_wait
+000200c8                _USBSTK5515_waitusec
+            00001060    __STACK_END
+00002000                __STACK_SIZE
+00001000                __SYSSTACK_SIZE
+00000001                __TI_args_main
+ffffffff                ___binit__
+ffffffff                ___bss__
+ffffffff                ___c_args__
+            00020000    ___cinit__
+ffffffff                ___data__
+ffffffff                ___edata__
+ffffffff                ___end__
+ffffffff                ___etext__
+ffffffff                ___pinit__
+ffffffff                ___text__
+00020135                __args_main
+            0000192c    __cleanup_ptr
+            0000192e    __dtors_ptr
+            00001928    __lock
+00020202                __nop
+000201fa                __register_lock
+000201f2                __register_unlock
+            00000060    __stack
+            00001060    __sysstack
+            0000192a    __unlock
+00020204                _abort
+000200e8                _auto_init
+000201be                _c_int00
+00020180                _exit
+00020000                _main
+            00001860    _x
+            000018c4    _y
+ffffffff                binit
+            00020000    cinit
+ffffffff                edata
+ffffffff                end
+ffffffff                etext
+ffffffff                pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+abs. value/
+byte addr   word addr   name
+---------   ---------   ----
+00000001                $TI_capability_requires_rev3
+00000001                __TI_args_main
+00000002                $TI_capability$C5500$CallingConvention
+00000002                $TI_capability$C5500$MemoryModel
+            00000060    __stack
+00001000                __SYSSTACK_SIZE
+00002000                __STACK_SIZE
+            00001060    __STACK_END
+            00001060    __sysstack
+            00001860    _x
+            000018c4    _y
+            00001928    __lock
+            0000192a    __unlock
+            0000192c    __cleanup_ptr
+            0000192e    __dtors_ptr
+00020000                _main
+00020094                _USBSTK5515_wait
+000200c8                _USBSTK5515_waitusec
+000200da                _USBSTK5515_init
+000200e8                _auto_init
+00020135                __args_main
+00020180                _exit
+000201be                _c_int00
+000201f2                __register_unlock
+000201fa                __register_lock
+00020202                __nop
+00020204                _abort
+00020205                C$$EXIT
+            00020000    ___cinit__
+            00020000    cinit
+0004fe00                _Reset
+ffffffff                .bss
+ffffffff                .data
+ffffffff                .text
+ffffffff                ___binit__
+ffffffff                ___bss__
+ffffffff                ___c_args__
+ffffffff                ___data__
+ffffffff                ___edata__
+ffffffff                ___end__
+ffffffff                ___etext__
+ffffffff                ___pinit__
+ffffffff                ___text__
+ffffffff                binit
+ffffffff                edata
+ffffffff                end
+ffffffff                etext
+ffffffff                pinit
+
+[48 symbols]
