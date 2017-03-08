@@ -1,0 +1,253 @@
+******************************************************************************
+              TMS320C55x Linker Unix v4.4.1                    
+******************************************************************************
+>> Linked Wed Mar  8 16:07:20 2017
+
+OUTPUT FILE NAME:   <Lab6_3.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00010b26
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+                        (bytes)   (bytes)    (bytes)   (bytes)
+----------------------  --------  ---------  --------  --------  ----  --------
+  MMR                   00000000   000000c0  00000000  000000c0  RW  
+  DARAM_0               000000c0   00001f40  00000100  00001e40  RW  
+  DARAM_1               00002000   00002000  00000020  00001fe0  RW  
+  DARAM_2               00004000   00002000  00000020  00001fe0  RW  
+  DARAM_3               00006000   00002000  00000020  00001fe0  RW  
+  DARAM                 00008000   00008000  00003170  00004e90  RW  
+  SARAM                 00010000   00040000  00000b8a  0003f476  RW  
+  EMIF_CS0              00050000   007b0000  00000000  007b0000  RW  
+  EMIF_CS2              00800000   00400000  00000000  00400000  RW  
+  EMIF_CS3              00c00000   00200000  00000000  00200000  RW  
+  EMIF_CS4              00e00000   00100000  00000000  00100000  RW  
+  EMIF_CS5              00f00000   000e0000  00000000  000e0000  RW  
+  SAROM_0               00fe0000   00008000  00000000  00008000  R  X
+  SAROM_1               00fe8000   00008000  00000000  00008000  R  X
+  SAROM_2               00ff0000   00008000  00000000  00008000  R  X
+  SAROM_3               00ff8000   00008000  00000000  00008000  R  X
+
+
+SECTION ALLOCATION MAP
+(Addresses surrounded by []'s are displayed for convenience only!)
+
+output                                                          attributes/
+section   page  orgn(bytes) orgn(words) len(bytes) len(words)   input sections
+--------  ----  ----------- ----------- ---------- ----------   --------------
+vectors      0     000000c0  [ 00000060 ] 00000100          *   NOLOAD SECTION
+                   000000c0  [ 00000060 ] 00000100          *   rts55x.lib : vectors.obj (vectors)
+
+cmplxBuf     0   [ 00002000 ]  00001000          *   00000010   UNINITIALIZED
+                 [ 00002000 ]  00001000          *   00000010   main.obj (cmplxBuf)
+
+tmpBuf       0   [ 00004000 ]  00002000          *   00000010   UNINITIALIZED
+                 [ 00004000 ]  00002000          *   00000010   main.obj (tmpBuf)
+
+brBuf        0   [ 00006000 ]  00003000          *   00000010   UNINITIALIZED
+                 [ 00006000 ]  00003000          *   00000010   main.obj (brBuf)
+
+.stack       0   [ 00008000 ]  00004000          *   00001000   UNINITIALIZED
+                 [ 00008000 ]  00004000          *   00001000   --HOLE--
+
+.data        0   [ 00008000 ]  00004000          *   00000000   UNINITIALIZED
+
+.sysstack 
+*            0   [ 0000a000 ]  00005000          *   00000800   UNINITIALIZED
+                 [ 0000a000 ]  00005000          *   00000800   --HOLE--
+
+.bss         0   [ 0000b000 ]  00005800          *   00000072   UNINITIALIZED
+                 [ 0000b000 ]  00005800          *   0000006a   main.obj (.bss)
+                 [ 0000b0d4 ]  0000586a          *   00000004   rts55x.lib : _lock.obj (.bss)
+                 [ 0000b0dc ]  0000586e          *   00000004              : exit.obj (.bss)
+
+.cinit       0   [ 0000b0e4 ]  00005872          *   00000024   
+                 [ 0000b0e4 ]  00005872          *   0000000f   main.obj (.cinit)
+                 [ 0000b102 ]  00005881          *   0000000a   rts55x.lib : _lock.obj (.cinit)
+                 [ 0000b116 ]  0000588b          *   0000000a              : exit.obj (.cinit)
+                 [ 0000b12a ]  00005895          *   00000001   --HOLE-- [fill = 0]
+
+.const       0   [ 0000b12c ]  00005896          *   00000022   
+                 [ 0000b12c ]  00005896          *   00000010   main.obj (.const:_$P$T0$1)
+                 [ 0000b14c ]  000058a6          *   00000010   main.obj (.const:_$P$T1$2)
+                 [ 0000b16c ]  000058b6          *   00000002   main.obj (.const)
+
+.text        0     00010000  [ 00008000 ] 00000b8a          *   
+                   00010000  [ 00008000 ] 00000634          *   main.obj (.text)
+                   00010634  [ 0000831a ] 0000025a          *   rts55x.lib : addd.obj (.text)
+                   0001088e  [ 00008447 ] 0000014c          *              : mpyd.obj (.text)
+                   000109da  [ 000084ed ] 00000076          *              : frcmpyd.obj (.text)
+                   00010a50  [ 00008528 ] 0000004d          *              : autoinit.obj (.text)
+                   00010a9d  [ 0000854e+] 0000004b          *              : args_main.obj (.text)
+                   00010ae8  [ 00008574 ] 0000003e          *              : exit.obj (.text)
+                   00010b26  [ 00008593 ] 00000034          *              : boot.obj (.text)
+                   00010b5a  [ 000085ad ] 00000014          *              : subd.obj (.text)
+                   00010b6e  [ 000085b7 ] 00000012          *              : _lock.obj (.text)
+                   00010b80  [ 000085c0 ] 00000007          *              : exit.obj (.text:CIO_breakpoint)
+                   00010b87  [ 000085c3+] 00000002          *              : vectors.obj (.text)
+                   00010b89  [ 000085c4 ] 00000001          *   --HOLE-- [fill = 20]
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+abs. value/
+byte addr   word addr   name
+---------   ---------   ----
+00000002                $TI_capability$C5500$CallingConvention
+00000002                $TI_capability$C5500$MemoryModel
+00000001                $TI_capability_requires_rev3
+            00005800    .bss
+            00004000    .data
+00010000                .text
+00010b81                C$$EXIT
+000000c0                _Reset
+            00005000    __STACK_END
+00002000                __STACK_SIZE
+00001000                __SYSSTACK_SIZE
+00000001                __TI_args_main
+ffffffff                ___binit__
+            00005800    ___bss__
+ffffffff                ___c_args__
+            00005872    ___cinit__
+            00004000    ___data__
+            00004000    ___edata__
+            00005872    ___end__
+00010b8a                ___etext__
+ffffffff                ___pinit__
+00010000                ___text__
+00010634                __addd
+00010a9d                __args_main
+            0000586e    __cleanup_ptr
+            00005870    __dtors_ptr
+000109da                __frcmpyd
+            0000586a    __lock
+0001088e                __mpyd
+00010b7e                __nop
+00010b76                __register_lock
+00010b6e                __register_unlock
+            00004000    __stack
+00010b5a                __subd
+            00005000    __sysstack
+            0000586c    __unlock
+00010b80                _abort
+00010a50                _auto_init
+00010000                _bitrev_of
+            00003000    _bitreversed_buffer
+000100e3                _butterfly
+00010b26                _c_int00
+            00001000    _complex_buffer
+0001005c                _complex_multiply
+0001047a                _do_fft
+00010552                _do_ifft
+00010ae8                _exit
+00ff7a56                _hwafft_1024pts
+00ff73cd                _hwafft_128pts
+00ff6dd9                _hwafft_16pts
+00ff75de                _hwafft_256pts
+00ff6f2f                _hwafft_32pts
+00ff77dc                _hwafft_512pts
+00ff7238                _hwafft_64pts
+00ff6cea                _hwafft_8pts
+00ff6cd6                _hwafft_br
+            00005840    _imagpart_fft
+0001043a                _main
+            00005838    _realpart_fft
+            00005848    _scale
+00010150                _sw_fft
+            00002000    _temporary_buffer
+            00005800    _x
+            00005808    _x_sw
+            0000585a    _y_imag
+            0000584a    _y_real
+            00005828    _y_sw_imag
+            00005818    _y_sw_real
+ffffffff                binit
+            00005872    cinit
+            00004000    edata
+            00005872    end
+00010b8a                etext
+ffffffff                pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+abs. value/
+byte addr   word addr   name
+---------   ---------   ----
+00000001                $TI_capability_requires_rev3
+00000001                __TI_args_main
+00000002                $TI_capability$C5500$CallingConvention
+00000002                $TI_capability$C5500$MemoryModel
+000000c0                _Reset
+00001000                __SYSSTACK_SIZE
+00002000                __STACK_SIZE
+            00001000    _complex_buffer
+            00002000    _temporary_buffer
+            00003000    _bitreversed_buffer
+            00004000    .data
+            00004000    ___data__
+            00004000    ___edata__
+            00004000    __stack
+            00004000    edata
+            00005000    __STACK_END
+            00005000    __sysstack
+            00005800    .bss
+            00005800    ___bss__
+            00005800    _x
+            00005808    _x_sw
+            00005818    _y_sw_real
+            00005828    _y_sw_imag
+            00005838    _realpart_fft
+            00005840    _imagpart_fft
+            00005848    _scale
+            0000584a    _y_real
+            0000585a    _y_imag
+            0000586a    __lock
+            0000586c    __unlock
+            0000586e    __cleanup_ptr
+            00005870    __dtors_ptr
+            00005872    ___cinit__
+            00005872    ___end__
+            00005872    cinit
+            00005872    end
+00010000                .text
+00010000                ___text__
+00010000                _bitrev_of
+0001005c                _complex_multiply
+000100e3                _butterfly
+00010150                _sw_fft
+0001043a                _main
+0001047a                _do_fft
+00010552                _do_ifft
+00010634                __addd
+0001088e                __mpyd
+000109da                __frcmpyd
+00010a50                _auto_init
+00010a9d                __args_main
+00010ae8                _exit
+00010b26                _c_int00
+00010b5a                __subd
+00010b6e                __register_unlock
+00010b76                __register_lock
+00010b7e                __nop
+00010b80                _abort
+00010b81                C$$EXIT
+00010b8a                ___etext__
+00010b8a                etext
+00ff6cd6                _hwafft_br
+00ff6cea                _hwafft_8pts
+00ff6dd9                _hwafft_16pts
+00ff6f2f                _hwafft_32pts
+00ff7238                _hwafft_64pts
+00ff73cd                _hwafft_128pts
+00ff75de                _hwafft_256pts
+00ff77dc                _hwafft_512pts
+00ff7a56                _hwafft_1024pts
+ffffffff                ___binit__
+ffffffff                ___c_args__
+ffffffff                ___pinit__
+ffffffff                binit
+ffffffff                pinit
+
+[74 symbols]

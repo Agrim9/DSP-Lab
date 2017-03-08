@@ -1,0 +1,1 @@
+"./main_sw_fft.obj" "../lnkx.cmd" -lrts55x.lib -l"/home/agrim/Downloads/C5515_Support_Files/usbstk5515bsl.lib" 
