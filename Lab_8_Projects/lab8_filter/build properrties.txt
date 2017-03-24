@@ -1,0 +1,6 @@
+"C:\Program Files (x86)\Texas Instruments\ccsv4\emulation\boards\usbstk5515_v1\include"
+"C:\Program Files (x86)\Texas Instruments\ccsv4\include"
+"C:\Program Files (x86)\Texas Instruments\ccsv4\tools\compiler\c5500\include"
+
+"C:\Program Files (x86)\Texas Instruments\ccsv4\tools\compiler\c5500\lib\libc.a"
+"D:\5515\usbstk5515bsl\usbstk5515bsl.lib"
